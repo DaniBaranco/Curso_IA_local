@@ -54,10 +54,12 @@ if (!generateBtn) {
 
     try {
         // Pasar también el idioma en la llamada a write
-        const result = await writer.write(idea, {
-            language: "es",
-            context: "Ayuda al usuario a escribir desde su idea breve"
-        });
+    const result = await writer.write(idea, {
+    outputLanguage: "es",
+    context: "Ayuda al usuario a escribir desde su idea breve"
+});
+
+
 
         output.textContent = result;
     } catch (err) {
