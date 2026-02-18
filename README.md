@@ -1,6 +1,6 @@
 # Curso IA Local
 
-Repositorio con proyectos de ejemplo que demuestran el uso de APIs de IA locales y privadas en el navegador Chrome.
+Repositorio con proyectos de ejemplo que demuestran el uso de APIs de IA locales y privadas en el navegador.
 
 ## Proyectos
 
@@ -29,6 +29,19 @@ Demo que utiliza la API `Rewriter` para reescribir y mejorar texto localmente o 
 
 Para más detalles, consulta la carpeta `02-reescritor`.
 
+### 03-resumidor
+App que utiliza la API `Summarizer` para resumir texto localmente o mediante fallback remoto.
+
+- **Descripción**: Resumidor que condensa textos largos en versiones más cortas manteniendo los puntos clave.
+- **Tecnología**: Summarizer API con ejecución on-device o remota
+- **Características**:
+  - Comprobación de disponibilidad local
+  - Resumen automático de textos
+  - Opciones de longitud y formato
+  - Fallback remoto con descarga de modelo
+  
+Para más detalles, consulta la carpeta `03-resumidor`.
+
 ## Cómo ejecutar los proyectos
 
 Cada proyecto es independiente y se puede ejecutar abriendo el archivo `index.html` en un navegador moderno (Chrome recomendado para desarrollo):
@@ -39,6 +52,9 @@ Abre 01-escritor/index.html en el navegador
 
 # Proyecto 02 - Reescritor
 Abre 02-reescritor/index.html en el navegador
+
+# Proyecto 03 - Resumidor
+Abre 03-resumidor/index.html en el navegador
 ```
 
 No se requieren dependencias externas ni servidor local.
@@ -60,6 +76,10 @@ Curso_IA_local/
 │   ├── index.html      (Interfaz de usuario)
 │   ├── main.js         (Lógica de reescritura)
 │   └── styles.css      (Estilos)
+├── 03-resumidor/
+│   ├── index.html      (Interfaz de usuario)
+│   ├── main.js         (Lógica de resumen)
+│   └── styles.css      (Estilos)
 └── README.md           (Este archivo)
 ```
 
@@ -74,6 +94,11 @@ Curso_IA_local/
 - `Rewriter.availability()` — Consulta disponibilidad de ejecución on-device
 - `Rewriter.create(options)` — Crea una instancia del reescritor
 - `rewriter.rewrite(text, params)` — Reescribe el texto
+
+### Summarizer API
+- `Summarizer.availability()` — Consulta disponibilidad de ejecución on-device
+- `Summarizer.create(options)` — Crea una instancia del resumidor
+- `summarizer.summarize(text)` — Resume el texto
 
 ## Notas importantes
 
