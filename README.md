@@ -1,4 +1,4 @@
-# Curso IA Local
+# Apps con IA local de Chrome
 
 Repositorio con proyectos de ejemplo que demuestran el uso de APIs de IA locales y privadas en el navegador.
 
