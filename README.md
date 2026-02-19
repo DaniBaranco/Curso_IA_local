@@ -1,115 +1,248 @@
-# Apps con IA local de Chrome
+# 🤖 Curso IA Local - Chrome AI APIs
 
-Repositorio con proyectos de ejemplo que demuestran el uso de APIs de IA locales y privadas en el navegador.
+Repositorio con proyectos de ejemplo que demuestran el uso de **APIs de IA locales y privadas** en el navegador Chrome.
 
-## Proyectos
+> **✨ Característica principal**: Todos los proyectos funcionan **sin necesidad de conexión a internet** cuando la IA se ejecuta localmente en tu dispositivo.
 
-### 01-escritor
-Pequeña app que utiliza la API `Writer` para generar texto localmente o mediante fallback remoto.
+---
 
-- **Descripción**: Generador de texto que toma una idea breve y produce contenido basado en parámetros de tono y longitud.
-- **Tecnología**: Writer API con ejecución on-device o remota
-- **Características**:
-  - Comprobación de disponibilidad local
-  - Generación de texto con opciones de tono y longitud
-  - Manejo de errores y fallback remoto
-  
-Para más detalles, consulta la carpeta `01-escritor`.
+## 📋 Proyectos Disponibles
 
-### 02-reescritor
-Demo que utiliza la API `Rewriter` para reescribir y mejorar texto localmente o mediante fallback remoto.
+### 1️⃣ **01-escritor** - Generador de Texto
+Pequeña app que utiliza la API `Writer` para generar texto localmente.
 
-- **Descripción**: Reescritor que mejora y adapta textos existentes según tono y longitud deseados.
-- **Tecnología**: Rewriter API con ejecución on-device o remota
-- **Características**:
-  - Corrección ortográfica y de claridad
-  - Adaptación de tono dinámico
-  - Ajuste de longitud del contenido
-  - Fallback remoto automático
+| Aspecto | Detalle |
+|--------|--------|
+| **API** | Writer |
+| **Función** | Genera texto creativo basado en prompts |
+| **Parámetros** | Tono y longitud personalizables |
+| **Conexión** | ✅ Funciona sin internet (local) |
 
-Para más detalles, consulta la carpeta `02-reescritor`.
+**Características:**
+- Comprobación de disponibilidad local
+- Generación de texto con opciones de tono y longitud
+- Manejo de errores y fallback remoto
 
-### 03-resumidor
-App que utiliza la API `Summarizer` para resumir texto localmente o mediante fallback remoto.
+---
 
-- **Descripción**: Resumidor que condensa textos largos en versiones más cortas manteniendo los puntos clave.
-- **Tecnología**: Summarizer API con ejecución on-device o remota
-- **Características**:
-  - Comprobación de disponibilidad local
-  - Resumen automático de textos
-  - Opciones de longitud y formato
-  - Fallback remoto con descarga de modelo
-  
-Para más detalles, consulta la carpeta `03-resumidor`.
+### 2️⃣ **02-reescritor** - Mejora de Texto
+Demo que utiliza la API `Rewriter` para reescribir y mejorar texto localmente.
 
-## Cómo ejecutar los proyectos
+| Aspecto | Detalle |
+|--------|--------|
+| **API** | Rewriter |
+| **Función** | Mejora y reescribe textos existentes |
+| **Parámetros** | Tono y longitud ajustables |
+| **Conexión** | ✅ Funciona sin internet (local) |
 
-Cada proyecto es independiente y se puede ejecutar abriendo el archivo `index.html` en un navegador moderno (Chrome recomendado para desarrollo):
+**Características:**
+- Corrección ortográfica y de claridad
+- Adaptación de tono dinámico
+- Ajuste de longitud del contenido
+- Fallback remoto automático
+
+---
+
+### 3️⃣ **03-resumidor** - Resumen Inteligente
+App que utiliza la API `Summarizer` para resumir texto localmente.
+
+| Aspecto | Detalle |
+|--------|--------|
+| **API** | Summarizer |
+| **Función** | Condensa textos largos en versiones cortas |
+| **Formato** | Plain text y TLDR |
+| **Conexión** | ✅ Funciona sin internet (local) |
+
+**Características:**
+- Resumen automático de textos
+- Opciones de longitud y formato
+- Mantiene los puntos clave del contenido
+
+---
+
+### 4️⃣ **04-detector-idiomas** - Detección de Idioma
+App que utiliza la API `LanguageDetector` para detectar idiomas automáticamente.
+
+| Aspecto | Detalle |
+|--------|--------|
+| **API** | LanguageDetector |
+| **Función** | Detecta automáticamente el idioma del texto |
+| **Idiomas** | Múltiples idiomas soportados |
+| **Conexión** | ✅ Funciona sin internet (local) |
+
+**Características:**
+- Detección automática de idioma
+- Análisis en tiempo real
+- Modelo descargable para ejecución offline
+
+---
+
+### 5️⃣ **05-traductor-idiomas** - Traducción de Texto
+App que utiliza la API `Translator` para traducir texto entre idiomas localmente.
+
+| Aspecto | Detalle |
+|--------|--------|
+| **API** | Translator |
+| **Función** | Traduce texto entre idiomas |
+| **Idiomas** | Múltiples pares de idiomas |
+| **Conexión** | ✅ Funciona sin internet (local) |
+
+**Características:**
+- Traducción bidireccional
+- Soporte para múltiples idiomas
+- Ejecución completamente local
+
+---
+
+## 🚀 Cómo Ejecutar los Proyectos
+
+Cada proyecto es **independiente** y se puede ejecutar abriendo el archivo `index.html` en **Chrome**:
 
 ```bash
-# Proyecto 01 - Escritor
-Abre 01-escritor/index.html en el navegador
+# Opción 1: Abre directamente el archivo HTML
+01-escritor/index.html
+02-reescritor/index.html
+03-resumidor/index.html
+04-detector-idiomas/index.html
+05-traductor-idiomas/index.html
 
-# Proyecto 02 - Reescritor
-Abre 02-reescritor/index.html en el navegador
-
-# Proyecto 03 - Resumidor
-Abre 03-resumidor/index.html en el navegador
+# Opción 2: Con un servidor local (Python)
+python -m http.server 8000
+# Luego accede a: http://localhost:8000/01-escritor/
 ```
 
-No se requieren dependencias externas ni servidor local.
+**✅ No se requieren dependencias externas ni servidor web.**
 
-## Requisitos
+---
 
-- Navegador moderno con soporte para APIs de IA (Chrome recomendado)
-- Acceso a internet (para fallback remoto en caso de que no esté disponible la ejecución local)
-
-## Estructura de archivos
+## 📦 Estructura de Archivos
 
 ```
 Curso_IA_local/
 ├── 01-escritor/
-│   ├── index.html      (Interfaz de usuario)
-│   ├── main.js         (Lógica de generación)
+│   ├── index.html      (Interfaz)
+│   ├── main.js         (Lógica)
 │   └── styles.css      (Estilos)
+│
 ├── 02-reescritor/
-│   ├── index.html      (Interfaz de usuario)
-│   ├── main.js         (Lógica de reescritura)
-│   └── styles.css      (Estilos)
+│   ├── index.html
+│   ├── main.js
+│   └── styles.css
+│
 ├── 03-resumidor/
-│   ├── index.html      (Interfaz de usuario)
-│   ├── main.js         (Lógica de resumen)
-│   └── styles.css      (Estilos)
+│   ├── index.html
+│   ├── main.js
+│   └── styles.css
+│
+├── 04-detector-idiomas/
+│   ├── index.html
+│   ├── main.js
+│   └── styles.css
+│
+├── 05-traductor-idiomas/
+│   ├── index.html
+│   ├── main.js
+│   └── styles.css
+│
 └── README.md           (Este archivo)
 ```
 
-## Conceptos clave
+---
+
+## 🔧 APIs Disponibles
 
 ### Writer API
-- `Writer.availability()` — Consulta disponibilidad de ejecución on-device
-- `Writer.create(options)` — Crea una instancia del generador
-- `writer.write(prompt, params)` — Genera texto
+```javascript
+Writer.availability()      // Consulta disponibilidad local
+Writer.create(options)     // Crea instancia del generador
+writer.write(prompt, params)  // Genera texto
+```
 
 ### Rewriter API
-- `Rewriter.availability()` — Consulta disponibilidad de ejecución on-device
-- `Rewriter.create(options)` — Crea una instancia del reescritor
-- `rewriter.rewrite(text, params)` — Reescribe el texto
+```javascript
+Rewriter.availability()    // Consulta disponibilidad local
+Rewriter.create(options)   // Crea instancia del reescritor
+rewriter.rewrite(text, params)  // Reescribe el texto
+```
 
 ### Summarizer API
-- `Summarizer.availability()` — Consulta disponibilidad de ejecución on-device
-- `Summarizer.create(options)` — Crea una instancia del resumidor
-- `summarizer.summarize(text)` — Resume el texto
+```javascript
+Summarizer.availability()  // Consulta disponibilidad local
+Summarizer.create(options) // Crea instancia del resumidor
+summarizer.summarize(text) // Resume el texto
+```
 
-## Notas importantes
+### LanguageDetector API
+```javascript
+LanguageDetector.availability()  // Consulta disponibilidad local
+LanguageDetector.create(options) // Crea instancia del detector
+detector.detect(text)            // Detecta el idioma
+```
 
-- Ambos proyectos soportan ejecución local en el dispositivo o fallback remoto
-- Se recomienda especificar `outputLanguage: "es"` para evitar advertencias
-- Consulta la consola de desarrollador (DevTools) para mensajes de diagnóstico
-- La disponibilidad local depende del dispositivo y navegador
+### Translator API
+```javascript
+Translator.availability()      // Consulta disponibilidad local
+Translator.create(languagePair) // Crea instancia del traductor
+translator.translate(text)      // Traduce el texto
+```
 
-## Desarrollo
+---
 
-Para debugging:
-1. Abre DevTools (F12 en Chrome)
-2. Consulta la consola para ver mensajes de log y errores
-3. Revisa los eventos de progreso en la consola si usas `monitor`
+## ⚙️ Requisitos
+
+- **Navegador**: Chrome/Edge moderno (versión 125+) con APIs de IA habilitadas
+- **Dispositivo**: Procesador con capacidad para modelos de IA (recomendado)
+- **Memoria**: 4GB mínimo para modelos locales
+- **Internet**: ✅ **Opcional** - solo para descargar modelos inicialmente
+
+---
+
+## 💡 Características Principales
+
+| Característica | Descripción |
+|---|---|
+| 🏠 **Ejecución Local** | Todo se ejecuta en tu dispositivo, sin enviar datos a servidores |
+| 🔐 **Privacidad** | Tus datos nunca salen del navegador |
+| ⚡ **Sin Dependencias** | No requiere Node.js ni servidores backend |
+| 🌐 **Funciona Offline** | Una vez descargados los modelos, funciona sin internet |
+| 🎨 **Interfaz Simple** | Demos minimalistas fáciles de entender y modificar |
+
+---
+
+## 📝 Notas Importantes
+
+1. **Disponibilidad Local**: La IA se descarga automáticamente en tu dispositivo
+2. **Idioma**: Se recomienda especificar `outputLanguage: "es"` para español
+3. **DevTools**: Usa F12 para ver mensajes de diagnóstico en la consola
+4. **Compatibilidad**: Verifica en Chrome > Configuración > Experimentales las APIs de IA
+5. **Primera Ejecución**: La descarga de modelos puede tomar algunos minutos
+
+---
+
+## 🐛 Debugging
+
+Para obtener información útil durante el desarrollo:
+
+```javascript
+// 1. Abre la consola de desarrollador (F12 en Chrome)
+// 2. Busca mensajes sobre disponibilidad
+// 3. Revisa el progreso de descarga de modelos
+// 4. Verifica errores de ejecución en la consola
+```
+
+**Comandos útiles en DevTools:**
+- `F12` — Abre DevTools
+- `Ctrl+Shift+J` — Abre solo la consola
+- `Ctrl+Shift+I` — Abre Inspector de elementos
+
+---
+
+## 📚 Recursos Adicionales
+
+- [Chrome AI APIs Documentación](https://developer.chrome.com/docs/ai/)
+- [Chrome Dev Blog](https://developer.chrome.com/blog/)
+- Consulta el README específico en cada carpeta de proyecto
+
+---
+
+**Creado con ❤️ para aprender sobre IA Local en el navegador**

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="main.js" defer></script>
+    <title>Tradcutor de idomas con IA local</title>
+</head>
+<body>
+
+    <h1>Traductor multilenguaje</h1>
+
+    <textarea id="textInput" placeholder="Escribe el texto que quieras traducir..."></textarea>
+    
+<div class="selectors">
+    <div class="selector__item">
+        <label for="sourceLang">Idioma de origen</label>
+        <select id="sourceLang">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="pt">Portugués</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Francés</option>
+            <option value="de">Alemán</option>
+        </select>
+    </div>
+
+        <div class="selector__item">
+            <label for="sourceLang">Idioma de destino</label>
+        <select id="targetLang">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="pt">Portugués</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Francés</option>
+            <option value="de">Alemán</option>
+        </select>
+    </div>
+</div>
+
+<button id="translate">Traducir</button>
+
+<section id="output">
+    Esperando traducción...
+</section>
+
+</body>
+</html>
