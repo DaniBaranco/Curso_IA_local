@@ -53,7 +53,7 @@ if (!generateBtn) {
             // ✔ Summarizer.summarizer() se llama sobre la instancia creada
             const result = await summarizer.summarize(text, {
                 outputLanguage: "es",
-                context: "Resumen del texto en español para un lector casual."
+                context: "Resumen del texto siempre en español de España para un lector casual."
             });
 
             output.textContent = result;
