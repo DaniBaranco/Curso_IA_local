@@ -94,6 +94,26 @@ App que utiliza la API `Translator` para traducir texto entre idiomas localmente
 
 ---
 
+### 6️⃣ **06-prompts** - Genio Gemini Nano
+App que utiliza la API `LanguageModel` (Gemini Nano) para generar respuestas inteligentes a cualquier pregunta.
+
+| Aspecto | Detalle |
+|--------|--------|
+| **API** | LanguageModel (Gemini Nano) |
+| **Función** | Responde preguntas con IA generativa |
+| **Capacidad** | Conversación general y razonamiento |
+| **Conexión** | ✅ Funciona sin internet (local) |
+
+**Características:**
+- Generación de respuestas inteligentes
+- Interfaz interactiva tipo "genio"
+- Indicadores de estado en tiempo real
+- Descarga automática del modelo
+- Monitoreo de progreso de descargas
+- Manejo robusto de errores
+
+---
+
 ## 🚀 Cómo Ejecutar los Proyectos
 
 Cada proyecto es **independiente** y se puede ejecutar abriendo el archivo `index.html` en **Chrome**:
@@ -105,6 +125,7 @@ Cada proyecto es **independiente** y se puede ejecutar abriendo el archivo `inde
 03-resumidor/index.html
 04-detector-idiomas/index.html
 05-traductor-idiomas/index.html
+06-prompts/index.html
 
 # Opción 2: Con un servidor local (Python)
 python -m http.server 8000
@@ -143,6 +164,11 @@ Curso_IA_local/
 │   ├── index.html
 │   ├── main.js
 │   └── styles.css
+├── 06-prompts/
+│   ├── index.html
+│   ├── main.js
+│   └── styles.css
+│
 │
 └── README.md           (Este archivo)
 ```
@@ -181,6 +207,13 @@ detector.detect(text)            // Detecta el idioma
 
 ### Translator API
 ```javascript
+### LanguageModel API (Gemini Nano)
+```javascript
+LanguageModel.availability()   // Consulta disponibilidad local
+LanguageModel.create(options)  // Crea instancia del modelo
+session.prompt(question)       // Genera respuesta a una pregunta
+```
+
 Translator.availability()      // Consulta disponibilidad local
 Translator.create(languagePair) // Crea instancia del traductor
 translator.translate(text)      // Traduce el texto
